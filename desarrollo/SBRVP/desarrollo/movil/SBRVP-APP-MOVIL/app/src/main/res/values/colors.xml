@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fb5256</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorAccent">#f71f2f</color>
+    <color name="colorAccentOff">#FE5864</color>
+    <color name="primaryTextColor">#979899</color>
+    <color name="genreToolbarColor">#1c1b20</color>
+    <color name="genreBackgroundColor">#1d1c21</color>
+
+    <color name="transparentGrayBackground">#991d1c21</color>
+    <color name="playButtonNormal">#FE5864</color>
+    <color name="playButtonTransparent">#99FE5864</color>
+
+
+    <color name="blue_facebook">#3c5a88</color>
+    <color name="blue_facebook_select">#3c6ab1</color>
+    <color name="darkBlack">#1b1b1b</color>
+
+    <color name="red">#F6402C</color>
+    <color name="pink">#EB1460</color>
+    <color name="purple">#9C1AB1</color>
+    <color name="deep_purple">#336633B9</color>
+    <color name="indigo">#3D4DB7</color>
+    <color name="blue">#1093F5</color>
+    <color name="light_blue">#00A6F6</color>
+    <color name="cyan">#00BBD5</color>
+    <color name="teal">#009687</color>
+    <color name="green">#46AF4A</color>
+    <color name="light_green">#88C440</color>
+    <color name="lime">#CCDD1E</color>
+    <color name="yellow">#FFEC16</color>
+    <color name="amber">#FFC100</color>
+    <color name="orange">#FF9800</color>
+    <color name="deep_orange">#FF5505</color>
+    <color name="brown">#7A5547</color>
+    <color name="grey">#9D9D9D</color>
+    <color name="blue_grey">#5E7C8B</color>
+
+    <color name="gray_regular">#858585</color>
+    <color name="gray">#333333</color>
+    <color name="explorer_gray">#252525</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_transparent">#f3000000</color>
+    <color name="black_select">#737373</color>
+    <color name="dark_gray">#4d4d4d</color>
+    <color name="cream">#ececec</color>
+    <color name="transparent">#00ececec</color>
+    <color name="error_red">#E0293F</color>
+    <color name="grayScan">#7f7e7d</color>
+
+    <color name="facebook_login_button">#5488c4</color>
+    <color name="normal_login_button">#fe5864</color>
+    <color name="second_step_button">#343434</color>
+    <color name="second_step_font_color">#fc5565</color>
+</resources>

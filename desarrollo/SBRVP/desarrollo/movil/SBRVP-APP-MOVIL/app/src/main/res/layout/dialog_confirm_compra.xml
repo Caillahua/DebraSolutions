@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comprar"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/title"
+        android:id="@+id/question"
+        android:textSize="15dp"
+        android:text="¿Desea realizar la compra de este producto?"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese la cantidad"
+        android:id="@+id/cantidad"
+        android:visibility="gone"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_below="@id/question"/>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_below="@id/cantidad"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:textColor="@color/gray_regular"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="CANCELAR"/>
+        <TextView
+            android:id="@+id/tv_aceptar"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ACEPTAR"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/genreBackgroundColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/where_you_are_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_user_picture"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/dan_music_logo" />
+
+
+            <TextView
+                android:id="@+id/tv_name_user"
+                fontPath="fonts/MaaxRoundedMedium_1.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="Hola Humano"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/genre_header_text_style"
+            fontPath="fonts/MaaxRounded_1.otf"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Un paso más y estaremos listos" />
+
+        <TextView
+            style="@style/genre_header_text_style"
+            fontPath="fonts/MaaxRounded_1.otf"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="para disfrutar de Jamm.me" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_user_last_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/where_you_are_header"
+        android:orientation="vertical">
+
+        <TextView
+            fontPath="fonts/MaaxRounded_1.otf"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/dark_gray"
+            android:gravity="center"
+            android:text="Elige tu género"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_user_gender"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/radio_button_group"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Hombre"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/radio_button_group"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Mujer"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+
+        <TextView
+            fontPath="fonts/MaaxRounded_1.otf"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/dark_gray"
+            android:gravity="center"
+            android:text="Elige tu fecha de nacimiento"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_user_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_square_gender"
+            android:text="Dia - Mes - Año"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

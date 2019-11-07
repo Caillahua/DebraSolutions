@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        barColorWhenSelected="#000"
+        icon="@drawable/ic_camera_alt"
+        id="@+id/tab_camera"
+        title="Cámara" />
+    <tab
+        barColorWhenSelected="#000"
+        icon="@drawable/ic_search"
+        id="@+id/tab_search"
+        title="Buscar" />
+
+    <tab
+        barColorWhenSelected="#000"
+        icon="@drawable/ic_photo"
+        id="@+id/tab_galery"
+        tint="@color/black"
+        title="Galería" />
+
+    <!--barColorWhenSelected="#fb5256"-->
+</tabs>

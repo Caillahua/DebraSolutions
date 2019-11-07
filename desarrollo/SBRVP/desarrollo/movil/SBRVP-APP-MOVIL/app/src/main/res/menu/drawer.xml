@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_connect"
+            android:visible="true"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/nav_profile"
+            android:title="Administrar" />
+
+        <item
+            android:id="@+id/nav_contact"
+            android:title="Programar Horarios" />
+        <item
+            android:id="@+id/nav_schedules_special"
+            android:title="Horarios Especiales" />
+        <item
+            android:id="@+id/places"
+            android:title="Sobre Symbiosis" />
+    </group>
+
+    <group
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_signout"
+            android:title="Cerrar Sesión" />
+    </group>
+</menu>
