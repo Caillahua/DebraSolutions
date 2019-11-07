@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/black"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rv_progress_bar"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscando producto..."
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:layout_below="@id/progressbar_tiendas"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimary"/>
+        <ProgressBar
+            android:id="@+id/progressbar_tiendas"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:alpha="0.7"
+            android:id="@+id/relative_layout"
+            android:background="@android:color/black">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@android:color/black"
+                android:gravity="center_vertical"
+                android:text="¿Captura correcta?"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+    <com.codev.capturalo.utils.TouchImageView
+        android:id="@+id/im_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_below="@id/relative_layout"
+        android:layout_above="@id/background"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/container_cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/imbtn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_cancel"
+            app:backgroundTint="@color/darkBlack"
+            app:fabSize="mini"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_photo"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:padding="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/imbtn_close"
+            app:layout_constraintStart_toStartOf="@+id/imbtn_close"
+            app:layout_constraintTop_toBottomOf="@+id/imbtn_close" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/relative_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/send_photo"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_send_photo"
+            app:layout_constraintEnd_toEndOf="@+id/btn_send_photo"
+            app:layout_constraintStart_toStartOf="@+id/btn_send_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info_take_photo"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_tips"
+            app:layout_constraintStart_toStartOf="@+id/btn_tips"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.design.widget.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btn_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_tips"
+            app:backgroundTint="@color/grayScan"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_send_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+
+        <android.support.design.widget.FloatingActionButton xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btn_send_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_action_send"
+            app:backgroundTint="@color/colorPrimary"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCamera" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</RelativeLayout>
