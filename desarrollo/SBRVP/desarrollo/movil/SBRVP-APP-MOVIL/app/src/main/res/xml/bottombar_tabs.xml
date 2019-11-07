@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        barColorWhenSelected="#000"
+        icon="@drawable/ic_home"
+        id="@+id/tab_home"
+        title="Inicio" />
+    <tab
+        barColorWhenSelected="#000"
+        icon="@drawable/ic_search"
+        id="@+id/tab_search"
+        title="Buscar" />
+
+    <tab
+        barColorWhenSelected="#000"
+        icon="@drawable/ic_person"
+        id="@+id/tab_profile"
+        title="Mi Perfil" />
+
+    <!--barColorWhenSelected="#fb5256"-->
+</tabs>

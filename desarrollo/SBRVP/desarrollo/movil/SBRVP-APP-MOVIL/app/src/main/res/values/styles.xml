@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="com_facebook_button" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/custom_facebook_login_button</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingLeft">60dp</item>
+        <item name="android:paddingRight">60dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">17.0dp</item>
+    </style>
+
+
+    <style name="button_jamm" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/button_square_border_primary_color</item>
+        <item name="android:paddingLeft">@dimen/margin_button</item>
+        <item name="android:paddingRight">@dimen/margin_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/size_buttons</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="button_follow" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/button_follow</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/size_buttons</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="button_jamm_facebook" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/custom_facebook_login_button</item>
+        <item name="android:paddingLeft">@dimen/margin_button</item>
+        <item name="android:paddingRight">@dimen/margin_button</item>
+        <item name="android:textColor">@color/white</item>
+        <!--<item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>-->
+        <item name="android:textSize">@dimen/size_buttons</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="facebook_button_style" parent="com_facebook_button">
+        <!--<item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>-->
+    </style>
+
+    <style name="normal_login_style">
+        <item name="android:textSize">17.0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@drawable/custom_normal_login_button</item>
+    </style>
+
+    <style name="genre_header_text_style">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="register_second_step" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@color/second_step_button</item>
+        <item name="android:textColor">@color/second_step_font_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="FadeInPopWin">
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--<item name="@android:windowEnterAnimation">@anim/pop_win_content_fade_in</item>-->
+        <!--<item name="@android:windowExitAnimation">@anim/pop_win_content_fade_out</item>-->
+    </style>
+</resources>

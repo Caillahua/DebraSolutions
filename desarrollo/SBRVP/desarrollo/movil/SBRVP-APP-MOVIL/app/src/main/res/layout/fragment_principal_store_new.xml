@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_song_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bb_darkBackgroundColor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="gone">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bb_darkBackgroundColor"
+                android:elevation="3dp"
+                android:subtitleTextColor="@color/white"
+                android:titleTextColor="@color/white"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:subtitleTextColor="@color/white"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="Buscar"
+                app:titleTextColor="@color/white" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/vw_limiter"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/appbar"
+            android:background="@color/colorPrimary"/>
+
+        <ScrollView
+            android:layout_marginBottom="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <ImageView
+                android:id="@+id/im_product"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/capturalo1200x900" />
+
+
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Nombre producto"
+                    android:textSize="20dp"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="20 productos"
+                    android:textSize="18dp"
+                    android:paddingStart="20dp"
+                    android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="S/ 100.00"
+                android:textSize="25dp"
+                android:paddingStart="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tv_caracteristicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver caracteristicas"
+                android:textSize="15dp"
+                android:paddingStart="20dp"
+                android:textAlignment="textEnd"
+                android:paddingBottom="15dp"
+                android:textColor="@color/gray_regular" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"/>
+            <TextView
+                android:id="@+id/tv_store_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Ripley"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tv_direccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Dirección: Jr la unidad 7670"
+                android:textSize="18dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/tv_como_llegar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="¿Cómo llegar?"
+                android:textSize="18dp"
+                android:paddingStart="20dp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/gray_regular" />
+            <TextView
+                android:id="@+id/tv_cell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="992406360"
+                android:textSize="18dp"
+                android:paddingStart="20dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        </ScrollView>
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_margin="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="CÓMPRALO"
+            android:layout_gravity="center"
+            android:background="@drawable/button_square_border_white"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+
+</RelativeLayout>
