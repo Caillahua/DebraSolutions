@@ -29,7 +29,7 @@ namespace CapturaloService.Controllers
             return View();
         }
 
-
+	// Insertar
         public string InsertarUsuario(string usuario, string contrasena, string correo, string perfil)
         {
             string result = "";
