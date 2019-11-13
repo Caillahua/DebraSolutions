@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.codev.capturalo.core.ScrollChildSwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_song_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bb_darkBackgroundColor">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bb_darkBackgroundColor"
+                android:elevation="3dp"
+                android:subtitleTextColor="@color/white"
+                android:titleTextColor="@color/white"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:subtitleTextColor="@color/white"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:title="Buscar"
+                app:titleTextColor="@color/white" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <View
+            android:id="@+id/vw_limiter"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/appbar"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:id="@+id/firstText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/buscar_icon" />
+
+            <TextView
+                fontPath="fonts/MaaxRounded_1.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="Busca tus productos favoritas según"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                fontPath="fonts/MaaxRounded_1.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="nombre o categoría"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                fontPath="fonts/MaaxRounded_1.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="álbum"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/noSongs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/buscar_icon" />
+
+            <TextView
+                fontPath="fonts/MaaxRounded_1.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="No se encontraron resultados para su"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                fontPath="fonts/MaaxRounded_1.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="nombre o categoría"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+            <TextView
+                fontPath="fonts/MaaxRounded_1.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="álbum"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_rv_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/vw_limiter"
+            android:visibility="gone">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_song_explorer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_explorer_song">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.codev.capturalo.core.ScrollChildSwipeRefreshLayout>

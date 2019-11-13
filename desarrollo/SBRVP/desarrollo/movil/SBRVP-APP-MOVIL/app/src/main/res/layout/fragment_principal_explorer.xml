@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/genreBackgroundColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/yourself_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/genre_header_text_style"
+                fontPath="fonts/MaaxRounded_1.otf"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/explorer_first_header" />
+
+            <TextView
+                style="@style/genre_header_text_style"
+                fontPath="fonts/MaaxRounded_1.otf"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/explorer_second_header" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ll_explorer_artists"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/iv_explorer_artists"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:drawingCacheQuality="low"
+                    android:padding=".8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/explorando_artistas" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button_square_bottom_corners"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        fontPath="fonts/MaaxRoundedBold_2.otf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:text="@string/artist_explorer_text"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_explorer_artists_start"
+                        fontPath="fonts/MaaxRounded_1.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="end|center_vertical"
+                        android:text="@string/start"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:animateLayoutChanges="true"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/iv_explorer_songs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:drawingCacheQuality="low"
+                    android:padding=".8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/explorando_canciones" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button_square_bottom_corners"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        fontPath="fonts/MaaxRoundedBold_2.otf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:gravity="start|center_vertical"
+                        android:text="@string/explorer_songs_tv"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_explorer_songs_start"
+                        fontPath="fonts/MaaxRounded_1.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="end|center_vertical"
+                        android:text="@string/start"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/genreBackgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:visibility="gone"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    fontPath="fonts/MaaxRoundedBold_2.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenido a "
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <TextView
+                    fontPath="fonts/MaaxRoundedBold_2.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capturalo"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22sp" />
+
+                <TextView
+                    fontPath="fonts/MaaxRoundedBold_2.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lo"
+                    android:visibility="gone"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        fontPath="fonts/MaaxRounded_1.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_name"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        fontPath="fonts/MaaxRounded_1.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=", ¿Preparado(a) para "
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                    <TextView
+                        fontPath="MaaxRounded_1.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/capturar"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp" />
+                    <TextView
+                        fontPath="fonts/MaaxRounded_1.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" lo que quieras?"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/MaaxRounded_1.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/recommended_genres"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_see_all_recommended_albums"
+                    fontPath="fonts/MaaxRounded_1.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/see_all"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_recommended_album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_recommended_article" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                fontPath="fonts/MaaxRoundedBold_2.otf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/popular_songs"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    fontPath="fonts/MaaxRounded_1.otf"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/list_of_best_songs"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_see_all_popular_song"
+                    fontPath="fonts/MaaxRounded_1.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/see_all"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_recommended_music"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_recommended_music" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

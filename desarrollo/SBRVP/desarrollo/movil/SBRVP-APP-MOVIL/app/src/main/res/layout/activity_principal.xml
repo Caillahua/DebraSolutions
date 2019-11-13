@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- This could be your fragment container, or something -->
+    <FrameLayout
+        android:id="@+id/contentContainer_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar" />
+    <FrameLayout
+        android:id="@+id/contentContainer_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar" />
+    <FrameLayout
+        android:id="@+id/contentContainer_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar" />
+    <FrameLayout
+        android:id="@+id/contentContainer_4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar" />
+
+    <FrameLayout
+        android:id="@+id/contentContainer_5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar" />
+
+
+    <com.roughike.bottombar.BottomBar
+        app:bb_inActiveTabAlpha="0.6"
+        app:bb_activeTabAlpha="1"
+        app:bb_showShadow="true"
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black"
+        android:layout_alignParentBottom="true"
+        app:bb_tabXmlResource="@xml/bottombar_tabs" />
+
+</RelativeLayout>

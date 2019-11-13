@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+//    signingConfigs {
+//        config {
+//            keyAlias 'capturaloapp'
+//            keyPassword 'capturaloapp'
+//            storePassword 'capturaloapp'
+//            storeFile file('C:\\Users\\USUARIO\\Documents\\Kath\\jks\\capturalo.jks')
+//        }
+//    }
+    defaultConfig {
+        applicationId "com.codev.capturalo"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            // Uses new built-in shrinker http://tools.android.com/tech-docs/new-build-system/built-in-shrinker
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+        }
+
+        release {
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+        }
+    }
+    flavorDimensions 'default'
+    productFlavors {
+
+        prod {
+            dimension 'default'
+            buildConfigField 'String', 'BASE','"https://capturaloservice.azurewebsites.net/Capturalo/"'
+//            signingConfig signingConfigs.config
+        }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+
+    // Remove mockRelease as it's not needed.
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/INDEX.LIST'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
+    implementation 'com.android.support:design:28.0.0-rc02'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.jakewharton:butterknife:8.8.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+//    implementation 'com.facebook.android:facebook-android-sdk:4.19.0'
+
+    implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
+
+    implementation 'com.roughike:bottom-bar:2.3.1'
+    implementation 'com.bignerdranch.android:expandablerecyclerview:3.0.0-RC1'
+
+    implementation 'com.google.api-client:google-api-client-android:1.23.0' exclude module: 'httpclient'
+    implementation 'com.google.http-client:google-http-client-gson:1.23.0' exclude module: 'httpclient'
+    implementation 'com.google.apis:google-api-services-vision:v1-rev369-1.23.0'
+
+}
