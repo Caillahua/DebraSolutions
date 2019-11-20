@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 namespace CapturaloService.Areas.HelpPage
 {
     /// <summary>
@@ -8,4 +9,16 @@ namespace CapturaloService.Areas.HelpPage
         Request = 0,
         Response
     }
+=======
+namespace CapturaloService.Areas.HelpPage
+{
+    /// <summary>
+    /// Indicates whether the sample is used for request or response
+    /// </summary>
+    public enum SampleDirection
+    {
+        Request = 0,
+        Response
+    }
+>>>>>>> origin/chacaliazaDebra
 }
