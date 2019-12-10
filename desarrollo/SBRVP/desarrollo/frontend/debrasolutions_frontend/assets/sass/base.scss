@@ -1,0 +1,58 @@
+@import './variables.scss';
+
+p {
+  color: $red;
+}
+
+a {
+  font-size: 0.8rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: $primary;
+  border-radius: 4rem;
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 2px solid $primary;
+  padding: 0.9rem 0 1.1rem;
+  transition: color .5s, border-color .5s;
+  margin-bottom: 15px;
+
+  &:hover, &:focus {
+    color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+label {
+	cursor: pointer;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
